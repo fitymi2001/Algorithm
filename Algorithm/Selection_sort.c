@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include "sort.h"
 
-int main() {
+void selection_sort() {
 	int arr[5] = { 5, 4, 3, 2, 1 }, tmp;
 
 	// print arr
