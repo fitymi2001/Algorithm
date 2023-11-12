@@ -22,21 +22,22 @@ void main_menu() {
                 switch (key_input) {
                 case UP:
                     if (select_index > 0) {
-                        gotoxy(1, select_index);
-                        printf(" ");
+                        gotoxy(67, select_index + 7);
+                        printf("  ");
                         select_index--;
                     }
                     break;
                 case DOWN:
                     if (select_index < 1) {
-                        gotoxy(1, select_index);
-                        printf(" ");
+                        gotoxy(67, select_index + 7);
+                        printf("  ");
                         select_index++;
                     }
                     break;
                 }
-                gotoxy(1, select_index);
-                printf(">");
+                gotoxy(67, select_index + 7);
+                printf(">>");
+                gotoxy(0, 0);
             }
 
             if (key_input == 26) {      // ctrl + z 입력
@@ -53,10 +54,14 @@ void main_menu() {
     }
     return;
 }
-
+          
 void main_menu_view(int select_index) {
-    printf("    정렬\n");
-    printf("    그래프\n");
-    gotoxy(1, select_index);
-    printf(">");
+    printf("\n\n                                                         *TIP1* [  방향키를 통해 조작 ]\n");
+    printf("                                                         *TIP2* [  Enter를 누르면 다음 화면 ]\n");
+    printf("                                                         *TIP3* [  Ctrl + z를 누르면 이전 화면 ]");
+    printf("\n\n\n                                                                      정렬\n");
+    printf("                                                                      그래프\n\n\n");
+    gotoxy(67, select_index+7);
+    printf(">>");
+    gotoxy(0,0);
 }
