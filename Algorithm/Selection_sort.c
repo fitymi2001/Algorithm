@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include "sort.h"
 
-void selection_sort() {
-	int arr[5] = { 5, 4, 3, 2, 1 }, tmp;
+void selection_sort(int** DataSet) {
+	int arr[5];
+	int tmp, length = sizeof(DataSet)/sizeof(int);
 
 	// print arr
 

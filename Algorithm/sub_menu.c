@@ -6,6 +6,9 @@
 #define DOWN 80
 
 void sub_menu_view(int select_index);
+int Input_DataSet();
+
+
 
 void sub_menu() {
     unsigned char select_index = 0;    // 현재 선택중인 정렬 (인덱스 번호)
@@ -47,32 +50,38 @@ void sub_menu() {
 
             if (key_input == 13)    // Enter 입력
             {
+                int* DataSet = 0;
+                system("cls");
+                if (Input_DataSet(&DataSet) == 1) { continue; };    // 사용자에게 데이터 셋 입력받기
+                system("cls");
                 switch (select_index) {
-                case 0:
+                case 0:     // 선택 정렬
 
                     break;
-                case 1:
+                case 1:     // 버블 정렬
 
                     break;
-                case 2:
+                case 2:     // 삽입 정렬
 
                     break;
-                case 3:
+                case 3:     // 합병 정렬
 
                     break;
-                case 4:
+                case 4:     // 퀵 정렬
 
                     break;
-                case 5:
+                case 5:     // 힙 정렬
 
                     break;
-                case 6:
+                case 6:     // 쉘 정렬
 
                     break;
-                case 7:
+                case 7:     // 기수 정렬
 
                     break;
                 }
+                free(DataSet);
+                sub_menu_view(select_index);
             }
         }
     }
@@ -83,8 +92,8 @@ void sub_menu_view(int select_index) {
     printf("\n\n                                                         *TIP1* [  방향키를 통해 조작 ]\n");
     printf("                                                         *TIP2* [  Enter를 누르면 다음 화면 ]\n");
     printf("                                                         *TIP3* [  Ctrl + z를 누르면 이전 화면 ]");
-    printf("\n\n\n                                                                      버블 정렬\n");
-    printf("                                                                      선택 정렬\n");
+    printf("\n\n\n                                                                      선택 정렬\n");
+    printf("                                                                      버블 정렬\n");
     printf("                                                                      삽입 정렬\n");
     printf("                                                                      합병 정렬\n");
     printf("                                                                        퀵 정렬\n");
@@ -94,4 +103,23 @@ void sub_menu_view(int select_index) {
     gotoxy(67, select_index + 7);
     printf(">>");
     gotoxy(0, 0);
+}
+
+int Input_DataSet(int** DataSet) {
+    int length = 0;
+    char key_input;
+    printf("\n\n                                                         *TIP1* [  데이터는 띄어쓰기로 구분하여 입력 ]\n");
+    printf("                                                         *TIP2* [  Enter를 눌러 확인 ]\n");
+    printf("                                                         *TIP3* [  q 입력시 이전 화면 ]\n");
+    printf("\n\n\n                                                              데이터의 개수를 입력하시오 : ");
+    scanf_s("%d", &length, sizeof(int));
+    if (length == 'q') { return 1; }
+    DataSet = (int*)malloc(sizeof(int)*length);
+    printf("                                                             정렬할 데이터셋을 입력하시요 : ");
+    for (int i = 0; i < length; i++)
+    {
+        scanf_s("%d", &DataSet[i], sizeof(int));
+        if (DataSet[i] == 'q') { return 1; free(DataSet); }
+    }
+    return 0;
 }
