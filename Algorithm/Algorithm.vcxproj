@@ -129,7 +129,10 @@
   <ItemGroup>
     <ClCompile Include="bubble_sort.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="main_menu.c" />
     <ClCompile Include="selection_sort.c" />
+    <ClCompile Include="sub_funtion.c" />
+    <ClCompile Include="sub_menu.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sort.h" />
