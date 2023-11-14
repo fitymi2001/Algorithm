@@ -1,9 +1,4 @@
-#include <stdio.h>
-#include <windows.h>
 #include "sort.h"
-
-#define UP 72
-#define DOWN 80
 
 void main_menu_view(int select_index);
 

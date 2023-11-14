@@ -127,10 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="bubble_sort.c" />
+    <ClCompile Include="Bubble_sort.c" />
+    <ClCompile Include="Insertion_sort.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="main_menu.c" />
-    <ClCompile Include="selection_sort.c" />
+    <ClCompile Include="Quick_sort.c" />
+    <ClCompile Include="Selection_sort.c" />
     <ClCompile Include="sub_funtion.c" />
     <ClCompile Include="sub_menu.c" />
   </ItemGroup>

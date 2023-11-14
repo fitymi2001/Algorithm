@@ -27,14 +27,20 @@
     <ClCompile Include="sub_funtion.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="bubble_sort.c">
+    <ClCompile Include="Bubble_sort.c">
       <Filter>소스 파일\sort</Filter>
     </ClCompile>
-    <ClCompile Include="selection_sort.c">
+    <ClCompile Include="Selection_sort.c">
       <Filter>소스 파일\sort</Filter>
     </ClCompile>
     <ClCompile Include="main_menu.c">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Insertion_sort.c">
+      <Filter>소스 파일\sort</Filter>
+    </ClCompile>
+    <ClCompile Include="Quick_sort.c">
+      <Filter>소스 파일\sort</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

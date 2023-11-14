@@ -1,16 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
-#include <windows.h>
 #include "sort.h"
-
-
-
-#define UP 72
-#define DOWN 80
 
 void sub_menu_view(int select_index);
 int Input_DataSet(int** DataSet);
-
 
 
 void sub_menu() {
@@ -59,13 +51,13 @@ void sub_menu() {
                     system("cls");
                     switch (select_index) {
                     case 0:     // 선택 정렬
-                        selection_sort(&DataSet);
+                        Selection_sort(&DataSet);
                         break;
                     case 1:     // 버블 정렬
-                        bubble_sort(&DataSet);
+                        Bubble_sort(&DataSet);
                         break;
                     case 2:     // 삽입 정렬
-
+                        Insertion_sort(&DataSet);
                         break;
                     case 3:     // 합병 정렬
 

@@ -1,7 +1,13 @@
 #pragma once
-void selection_sort();
-void bubble_sort();
+#include <stdio.h>
+#include <Windows.h>
+#include <string.h>
+#include <conio.h>
+void Selection_sort();
+void Bubble_sort();
+void Insertion_sort();
 void main_menu();
 void sub_menu();
-void gotoxy(int x, int y);
-#define _CRT_SECURE_NO_WARNINGS
+void gotoxy();
+#define UP 72
+#define DOWN 80

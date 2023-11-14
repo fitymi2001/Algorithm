@@ -1,4 +1,4 @@
-#include <Windows.h>
+#include "sort.h"
 
 void gotoxy(int x, int y) {
     COORD pos = { x,y };

@@ -1,7 +1,4 @@
-﻿#include <stdio.h>
-#include <windows.h>
-#include "sort.h"
-#pragma warning(disable:4996)
+﻿#include "sort.h"
 
 void logo_print();
 

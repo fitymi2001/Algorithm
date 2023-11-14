@@ -1,7 +1,6 @@
-#include <stdio.h>
 #include "sort.h"
 
-void selection_sort(int** DataSet) {
+void Selection_sort(int** DataSet) {
 	int i, tmp, length = _msize(*DataSet)/sizeof(int);
 	char key_input = 0;
 

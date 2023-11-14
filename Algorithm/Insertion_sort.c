@@ -1,7 +1,7 @@
 #include "sort.h"
 
-void Bubble_sort(int** DataSet) {
-	int i, tmp, length = _msize(*DataSet) / sizeof(int);
+void Insertion_sort(int** DataSet) {
+	int i, tmp, length = _msize(*DataSet) / sizeof(int), value;
 	char key_input = 0;
 
 	// print arr
@@ -12,15 +12,19 @@ void Bubble_sort(int** DataSet) {
 		printf("%d ", (*DataSet)[i]);
 	}
 
-	for (i = 0; i < length-1; i++)
+	for (i = 1; i < length; i++)
 	{
-		for ( int j = 0; j < length-(i+1); j++)
+		if ((*DataSet)[i - 1] <= (*DataSet)[i])
+			continue;
+		value = (*DataSet)[i];
+
+		for (int j = 0; j < i; j++)
 		{
-			if ((*DataSet)[j] > (*DataSet)[j + 1]) 
+			if ((*DataSet)[j] > value)
 			{
-				tmp = (*DataSet)[j + 1];
-				(*DataSet)[j + 1] = (*DataSet)[j];
-				(*DataSet)[j] = tmp;
+				memmove(&(*DataSet)[j + 1], &(*DataSet)[j], sizeof((*DataSet)[0]) * (i - j)); 
+				(*DataSet)[j] = value;
+				break;
 			}
 		}
 	}
