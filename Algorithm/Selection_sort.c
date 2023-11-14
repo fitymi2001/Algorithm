@@ -2,32 +2,37 @@
 #include "sort.h"
 
 void selection_sort(int** DataSet) {
-	int arr[5];
-	int tmp, length = sizeof(DataSet)/sizeof(int);
+	int i, tmp, length = _msize(*DataSet)/sizeof(int);
+	char key_input = 0;
 
 	// print arr
 
-	printf("arr = ");
-	for (int i = 0; i < 5; i++) {
-		printf("%d", arr[i]);
+	printf("\n\n                                                         *TIP* [ Enter를 눌러 돌아가기 ]");
+	printf("\n\n                                                   입력된 값 = ");
+	for (i = 0; i < length; i++) {
+		printf("%d ", (*DataSet)[i]);
 	}
 
 	// start sort
 
-	for (int i = 0; i < 5; i++) {
-		for (int j = i + 1; j < 5; j++) {
-			if (arr[i] > arr[j]) {
-				tmp = arr[i];
-				arr[i] = arr[j];
-				arr[j] = tmp;
+	for (i = 0; i < length; i++) {
+		for (int j = i + 1; j < length; j++) {
+			if ((*DataSet)[i] > (*DataSet)[j]) {
+				tmp = (*DataSet)[i];
+				(*DataSet)[i] = (*DataSet)[j];
+				(*DataSet)[j] = tmp;
 			}
 		}
 	}
 
 	// print arr
 
-	printf("\narr = ");
-	for (int i = 0; i < 5; i++) {
-		printf("%d", arr[i]);
+	printf("\n\n                                                   정렬된 값 = ");
+	for (i = 0; i < length; i++) {
+		printf("%d ", (*DataSet)[i]);
 	}
+	while (1) {
+		if (_getch() == 13) break;
+	}
+	return;
 }

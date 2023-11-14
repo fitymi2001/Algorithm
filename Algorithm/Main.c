@@ -1,6 +1,7 @@
 ﻿#include <stdio.h>
 #include <windows.h>
 #include "sort.h"
+#pragma warning(disable:4996)
 
 void logo_print();
 
@@ -9,6 +10,7 @@ int main(void) {
     logo_print();
     while (1) {
         if (_kbhit()) {
+            _getch();
             main_menu();
             system("cls");
             logo_print();
