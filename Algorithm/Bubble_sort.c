@@ -1,6 +1,8 @@
 #include "sort.h"
 
-void Bubble_sort(int** DataSet) {
+int Bubble_sort(int run_check, int** DataSet) {
+	if (run_check == 0) return 0;
+
 	int i, tmp, length = _msize(*DataSet) / sizeof(int);
 	char key_input = 0;
 
@@ -33,5 +35,5 @@ void Bubble_sort(int** DataSet) {
 	while (1) {
 		if (_getch() == 13) break;
 	}
-	return;
+	return 0;
 }

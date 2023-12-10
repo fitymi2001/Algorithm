@@ -1,6 +1,8 @@
 #include "sort.h"
 
-void Insertion_sort(int** DataSet) {
+int Insertion_sort(int run_check, int** DataSet) {
+	if (run_check == 0) return 0;
+
 	int i, tmp, length = _msize(*DataSet) / sizeof(int), value;
 	char key_input = 0;
 
@@ -37,5 +39,5 @@ void Insertion_sort(int** DataSet) {
 	while (1) {
 		if (_getch() == 13) break;
 	}
-	return;
+	return 0;
 }

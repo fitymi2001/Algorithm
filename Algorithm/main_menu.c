@@ -42,7 +42,10 @@ void main_menu() {
 
             if (key_input == 13)    // Enter ют╥б
             {
-                sub_menu();
+                if(select_index == 0)
+                    sub_menu();
+                else if (select_index == 1)
+                    Incomplete();
                 main_menu_view(select_index);
             }
         }

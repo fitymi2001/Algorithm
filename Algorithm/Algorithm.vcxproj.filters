@@ -21,9 +21,6 @@
     <ClCompile Include="main.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="sub_menu.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="sub_funtion.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -40,6 +37,24 @@
       <Filter>소스 파일\sort</Filter>
     </ClCompile>
     <ClCompile Include="Quick_sort.c">
+      <Filter>소스 파일\sort</Filter>
+    </ClCompile>
+    <ClCompile Include="Merge_sort.c">
+      <Filter>소스 파일\sort</Filter>
+    </ClCompile>
+    <ClCompile Include="Shell_sort.c">
+      <Filter>소스 파일\sort</Filter>
+    </ClCompile>
+    <ClCompile Include="Heap_sort.c">
+      <Filter>소스 파일\sort</Filter>
+    </ClCompile>
+    <ClCompile Include="Radix_sort.c">
+      <Filter>소스 파일\sort</Filter>
+    </ClCompile>
+    <ClCompile Include="sub_menu.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort_manager.c">
       <Filter>소스 파일\sort</Filter>
     </ClCompile>
   </ItemGroup>

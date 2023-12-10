@@ -1,6 +1,8 @@
 #include "sort.h"
 
-void Selection_sort(int** DataSet) {
+int Selection_sort(int run_check, int **DataSet) {
+	if (run_check == 1) return 0;
+
 	int i, tmp, length = _msize(*DataSet)/sizeof(int);
 	char key_input = 0;
 
@@ -33,5 +35,5 @@ void Selection_sort(int** DataSet) {
 	while (1) {
 		if (_getch() == 13) break;
 	}
-	return;
+	return 0;
 }

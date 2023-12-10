@@ -128,11 +128,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Bubble_sort.c" />
+    <ClCompile Include="Heap_sort.c" />
     <ClCompile Include="Insertion_sort.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="main_menu.c" />
+    <ClCompile Include="Merge_sort.c" />
     <ClCompile Include="Quick_sort.c" />
+    <ClCompile Include="Radix_sort.c" />
     <ClCompile Include="Selection_sort.c" />
+    <ClCompile Include="Shell_sort.c" />
+    <ClCompile Include="Sort_manager.c" />
     <ClCompile Include="sub_funtion.c" />
     <ClCompile Include="sub_menu.c" />
   </ItemGroup>
